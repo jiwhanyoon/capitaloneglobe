@@ -192,7 +192,7 @@ DAT.Globe = function(container, opts) {
           lat = data[i];
           lng = data[i + 1];
 //        size = data[i + 2];
-          color = colorFnWrapper(data,i);
+          color = colorFnWrapper(data,i+1);
           console.log('COLOR!!', color);
           size = 0;
           addPoint(lat, lng, size, color, this._baseGeometry);
