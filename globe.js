@@ -20,7 +20,7 @@ DAT.Globe = function(container, opts) {
   console.log(opts);
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
-    c.setHSL( x * 0.5, 100, 100);
+    c.setHSL( x * 0.6, 100, 100);
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
