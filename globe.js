@@ -20,7 +20,7 @@ DAT.Globe = function(container, opts) {
   console.log(opts);
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
-    c.setHSL( 50, 50 ,50  );
+    c.setHSL( 10, 10, 10);
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
@@ -216,7 +216,7 @@ DAT.Globe = function(container, opts) {
       lng = data[i + 1];
       color = colorFnWrapper(data,i);
       size = data[i + 2];
-      size = size*7;
+      size = size * 7;
       addPoint(lat, lng, size, color, subgeo);
     }
     if (opts.animated) {
