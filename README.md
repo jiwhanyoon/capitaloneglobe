@@ -1,6 +1,6 @@
-###### WebGL Globe
+# WebGL Globe
 
-#### 10/29/2016
+### 10/29/2016
 
 
 This is a WebGL Globe for a project to submit to Capital One. The demo version can be accessed here.
