@@ -49,7 +49,7 @@ THREEx.Planets.createEarth	= function(){
 		specularMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'images/earthspec1k.jpg'),
 		specular	: new THREE.Color('grey'),
 	})
-	console.log("url", THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL)
+	console.log("url", THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL))
 	var mesh	= new THREE.Mesh(geometry, material)
 	return mesh	
 }
