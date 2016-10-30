@@ -178,7 +178,8 @@ DAT.Globe = function(container, opts) {
     if (opts.format === 'magnitude') 
     {
       step = 3;
-      colorFnWrapper = function(data, i) { return colorFn(data[i+2]);}
+      colorFnWrapper = function(data, i) 
+      { return colorFn(data[i+2]);}
     } 
     else if (opts.format === 'legend') 
     {
@@ -190,10 +191,13 @@ DAT.Globe = function(container, opts) {
       throw('error: format not supported: '+opts.format);
     }
 
-    if (opts.animated) {
-      if (this._baseGeometry === undefined) {
+    if (opts.animated) 
+    {
+      if (this._baseGeometry === undefined) 
+      {
         this._baseGeometry = new THREE.Geometry();
-        for (i = 0; i < data.length; i += step) {
+        for (i = 0; i < data.length; i += step) 
+        {
           lat = data[i];
           lng = data[i + 1];
 //        size = data[i + 2];
@@ -210,6 +214,7 @@ DAT.Globe = function(container, opts) {
       }
       opts.name = opts.name || 'morphTarget'+this._morphTargetId;
     }
+
     var subgeo = new THREE.Geometry();
     for (i = 0; i < data.length; i += step) {
       lat = data[i];
