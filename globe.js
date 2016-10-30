@@ -20,7 +20,7 @@ DAT.Globe = function(container, opts) {
   console.log(opts);
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
-    c.setHSL(100, 100, 100);
+    c.setHSL( ( 0.6 - ( x * 0.5 ) ), 1.0, 0.5 );
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
@@ -175,13 +175,18 @@ DAT.Globe = function(container, opts) {
     opts.format = opts.format || 'magnitude'; // other option is 'legend'
     console.log(opts.format);
 
-    if (opts.format === 'magnitude') {
+    if (opts.format === 'magnitude') 
+    {
       step = 3;
-      colorFnWrapper = function(data, i) { return colorFn(data[i+2]); }
-    } else if (opts.format === 'legend') {
+      colorFnWrapper = function(data, i) { return colorFn(data[i+2]);}
+    } 
+    else if (opts.format === 'legend') 
+    {
       step = 4;
       colorFnWrapper = function(data, i) { return colorFn(data[i+3]); }
-    } else {
+    } 
+    else 
+    {
       throw('error: format not supported: '+opts.format);
     }
 
@@ -192,7 +197,7 @@ DAT.Globe = function(container, opts) {
           lat = data[i];
           lng = data[i + 1];
 //        size = data[i + 2];
-          color = colorFnWrapper(data,i+1);
+          color = colorFnWrapper(data,i);
           console.log('COLOR!!', color);
           size = 0;
           addPoint(lat, lng, size, color, this._baseGeometry);
