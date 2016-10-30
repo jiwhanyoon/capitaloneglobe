@@ -21,7 +21,7 @@ DAT.Globe = function(container, opts)
   console.log(opts);
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
-    c.setHSL( x/10, x/10, 250);
+    c.setHSL( Math.floor(x/10), Math.floor(x/10), 100);
     return c;
   };
   var imgDir = opts.imgDir || '/globe/';
@@ -206,7 +206,7 @@ DAT.Globe = function(container, opts)
           color = colorFnWrapper(data,i);
           console.log('COLOR!!', color);
           size = 0;
-          addPoint(lat, lng, size, color * 0.3, this._baseGeometry);
+          addPoint(lat, lng, size, color, this._baseGeometry);
         }
       }
       if(this._morphTargetId === undefined) {
