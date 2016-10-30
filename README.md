@@ -10,7 +10,7 @@ This is a **WebGL Globe** for a project to submit to Capital One. The demo versi
 
 ----
 
-![](http://4.bp.blogspot.com/-nB6XnTgb4AA/TcLQ4gRBtfI/AAAAAAAAH-U/vb2GuhPN6aM/globe.png)
+![](https://github.com/jiwhanyoon/capitaloneglobe/blob/master/view.png)
 
 The WebGL Globe is an open platform for geographic data visualization from Chrome Experiments that allows users to enter many types of data and map where the associated events occurred on the planet - I chose to use the data set that represented the latitude, longitude, and magnitude of the earthquakes that happened throughout the world in 1964, 1969, and 1974. The data can be accessed from [here](http://datasets.flowingdata.com/earthquakes1974.csv).
 
