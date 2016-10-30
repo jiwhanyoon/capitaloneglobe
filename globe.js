@@ -15,7 +15,8 @@
 
 var DAT = DAT || {};
 
-DAT.Globe = function(container, opts) {
+DAT.Globe = function(container, opts) 
+{
   opts = opts || {};
   console.log(opts);
   var colorFn = opts.colorFn || function(x) {
@@ -87,7 +88,8 @@ DAT.Globe = function(container, opts) {
   var padding = 40;
   var PI_HALF = Math.PI / 2;
 
-  function init() {
+  function init() 
+  {
 
     container.style.color = '#fff';
     container.style.font = '13px/20px Arial, sans-serif';
@@ -204,7 +206,7 @@ DAT.Globe = function(container, opts) {
           color = colorFnWrapper(data,i);
           console.log('COLOR!!', color);
           size = 0;
-          addPoint(lat, lng, size, color, this._baseGeometry);
+          addPoint(lat, lng, size, color * 0.3, this._baseGeometry);
         }
       }
       if(this._morphTargetId === undefined) {
