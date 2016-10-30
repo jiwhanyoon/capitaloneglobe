@@ -127,12 +127,22 @@
   <script type="text/javascript" src="third-party/three.min.js"></script>
   <script type="text/javascript" src="third-party/Tween.js"></script>
   <script type="text/javascript" src="globe.js"></script>
+  <script type="text/javascript" src='threex.planets.js'></script>
   <script type="text/javascript">
+
+    var mesh    = THREEx.Planets.createEarth();
+    scene.add(mesh);
+    var mesh    = THREEx.Planets.createEarthCloud();
+    scene.add(mesh);
+    updateFcts.push(function(delta, now){
+        mesh.rotation.y += 1/8 * delta;     
+    });
 
     if(!Detector.webgl){
       Detector.addGetWebGLMessage();
-    } else {
-
+    } 
+    else 
+    {
       var years = ['1964','1969','1974'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
