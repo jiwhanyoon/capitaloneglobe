@@ -17,7 +17,7 @@ The WebGL Globe is an open platform for geographic data visualization from Chrom
 
 ----
 
-Data parsing and reorganization was done in Python - read more about the steps I have taken through "Paragraph.txt" file.
+Data parsing and reorganization was done in Python - read more about the steps I have taken through "Paragraph.md" file.
 
 ## Data Format
 
