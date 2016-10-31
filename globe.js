@@ -18,7 +18,7 @@ var DAT = DAT || {};
 DAT.Globe = function(container, opts) 
 {
   opts = opts || {};
-  console.log(opts);
+  //console.log(opts);
   var colorFn = opts.colorFn || function(x) {
     var c = new THREE.Color();
     c.setHSL( 0.6 - (x * 0.2), x * 0.8, 150.0);
@@ -178,7 +178,7 @@ DAT.Globe = function(container, opts)
     opts.animated = opts.animated || false;
     this.is_animated = opts.animated;
     opts.format = opts.format || 'magnitude'; // other option is 'legend'
-    console.log(opts.format);
+    //console.log(opts.format);
 
     if (opts.format === 'magnitude') 
     {
