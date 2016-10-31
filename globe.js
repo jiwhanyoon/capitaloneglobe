@@ -108,7 +108,10 @@ DAT.Globe = function(container, opts)
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture('world1.jpg');
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture('earth.jpg');
+
+    
+    
 
     material = new THREE.ShaderMaterial({
 
@@ -204,7 +207,7 @@ DAT.Globe = function(container, opts)
           lng = data[i + 1];
 //        size = data[i + 2];
           color = colorFnWrapper(data,i);
-          console.log('COLOR!!', color);
+          //console.log('COLOR!!', color);
           size = 0;
           addPoint(lat, lng, size, color, this._baseGeometry);
         }
